@@ -66,7 +66,7 @@ const fetchAllUsers = async (token) => {
 const addDialog = async(token, userId) => {
   try {
     const userToAdd = {userId}
-    const {data} = await appRequest.post(userToAdd, {
+     await appRequest.post(userToAdd, {
       headers: {
         Authorization: `Bearer ${token}`
       }

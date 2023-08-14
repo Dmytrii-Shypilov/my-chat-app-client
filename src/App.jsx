@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import { Suspense, lazy, useEffect } from "react";
+import { Suspense } from "react";
 
 import ChatPage from "./pages/ChatPage";
 import AuthPage from "./pages/AuthPage";
 import { PrivateRoute } from "./components/routes/PrivateRoute";
 import { PublicRoute } from "./components/routes/PublicRoute";
-import { getUser } from "./redux/user/user-selector";
-import { useDispatch, useSelector } from "react-redux";
-import { getCurrentUser } from "./redux/user/user-operations";
+// import { getUser } from "./redux/user/user-selector";
+// import { useDispatch, useSelector } from "react-redux";
+// import { getCurrentUser } from "./redux/user/user-operations";
 
 function App() {
 
