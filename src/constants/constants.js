@@ -1,1 +1,1 @@
-export const appUrl = "https://192.168.0.103:4000"
+export const appUrl = "https://whatsapp-clone-app-server-production.up.railway.app"
