@@ -1,0 +1,35 @@
+.user {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid lightgrey;
+  user-select: none;
+  &:first-of-type {
+    border-top: 1px solid lightgrey;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+}
+
+
+.info {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 25px;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.icon {
+  display: block;
+  height: 17px;
+  cursor: pointer;
+  &:hover {
+    fill: var(--main-br-col);
+  }
+}

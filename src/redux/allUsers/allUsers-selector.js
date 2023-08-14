@@ -1,0 +1,1 @@
+export const obtainAllUsers = state => state.allUsers

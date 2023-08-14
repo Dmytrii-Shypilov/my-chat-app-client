@@ -1,0 +1,17 @@
+.btn {
+    padding: 3px 6px;
+    border-color: transparent;
+    border-radius: 4px;
+    color: var(--secondary-font-col);
+    background-color: var(--main-br-col);
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8
+    }
+}
+
+.lightBtn {
+    @extend .btn;
+    color: var(--main-br-col);
+    background-color: var(--main-bg-col);
+}

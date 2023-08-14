@@ -1,0 +1,26 @@
+.placeholder {
+    flex-grow: 1;
+    height: 100vh;
+    padding: 40px 0px;
+    background-image: url('../../images/chat-dialog.png');
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    border-left: 1px solid lightgray;
+}
+
+.textWrapper {
+    text-align: center;
+}
+
+.text {
+    font-size: 25px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.name {
+    font-weight: 700;
+}
+

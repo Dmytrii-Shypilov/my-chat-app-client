@@ -1,0 +1,31 @@
+.section {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  padding: 30px 300px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconWrappaer {
+  display: flex;
+  height: 500px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.icon {
+  display: block;
+  width: 200px;
+  margin: 30px auto 0px;
+  user-select: none;
+ 
+}

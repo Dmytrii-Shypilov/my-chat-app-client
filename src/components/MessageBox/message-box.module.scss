@@ -1,0 +1,88 @@
+.messageCommonBox {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    
+   
+}
+
+.messageCommon {
+    position: relative;
+    display: flex;
+    max-width: 250px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 12px;
+    background-color: azure;
+}
+
+.messageBoxInc {
+   @extend .messageCommonBox;
+   align-items: start;
+}
+
+.messageBoxOut {
+    @extend .messageCommonBox;
+    align-items: end;
+}
+
+.messageOut {
+    @extend .messageCommon;
+    &:not(:first-of-type):not(:last-of-type):not(:only-of-type) {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    
+    &:first-of-type:not(:only-of-type) {
+        border-bottom-right-radius: 3px ;
+    }
+    &:last-of-type:not(:only-of-type) {
+        border-top-right-radius: 3px;
+    }
+}
+
+.messageInc {
+    @extend .messageCommon;
+    &:not(:first-of-type):not(:last-of-type):not(:only-of-type) {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    
+    &:first-of-type:not(:only-of-type) {
+        border-bottom-left-radius: 3px ;
+    }
+    &:last-of-type:not(:only-of-type) {
+        border-top-left-radius: 3px;
+    }
+}
+
+.text {
+    display: block;
+    // min-width: 20px;
+    font-size: 18px;
+    // margin-bottom: 7px;
+    text-align: left;
+}
+.time {
+    position: absolute;
+    left: -35px;
+    // bottom: 4px;
+    // right: 10px;
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--secondary-font-col);
+}
+
+.timeInc {
+    position: absolute;
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--secondary-font-col);
+    right: -35px;
+   
+}

@@ -1,0 +1,1 @@
+export const getDialogs = state => state.dialogs

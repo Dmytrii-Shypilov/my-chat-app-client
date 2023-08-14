@@ -1,0 +1,59 @@
+.dialog {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+    user-select: none;
+    &:first-of-type {
+        border-top: 1px solid lightgrey;
+        
+    }
+
+    &:hover {
+        background-color: lightblue;
+    }
+    
+}
+
+.info {
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-of-type) {
+        margin-bottom: 5px;
+    }
+}
+
+.name {
+    font-weight: 600;
+}
+
+.message {
+    font-size: 13px;
+}
+
+.time {
+    font-size: 13px;
+}
+
+.unread {
+    display: flex;
+    justify-content: center;
+    
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    font-size: 13px;
+    border-radius: 50%;
+    color: var(--main-bg-col);
+    background-color: var(--main-br-col);
+}
+
+.btnsWrapper {
+    display: flex;
+}
