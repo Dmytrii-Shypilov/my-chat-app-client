@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const newSocket = io.connect("https://whatsapp-clone-app-server-production.up.railway.app", {
+    const newSocket = io.connect("http://192.168.0.100:4000", {
       auth: {
         userName: name,
         userId: id,
@@ -23,15 +23,10 @@ export const SocketContextProvider = ({ children }) => {
       },
     });
 
-    setSocket(newSocket);
+    setSocket(newSocket)
+  }, [id, name, token]);
 
-    return () => {
-      if (socket) {
-        ["UpdateDialogs", "InviteAccepted", "MessageAdded"].forEach((el) => socket.off(el));
-        socket.disconnect();
-      }
-    };
-  }, [id, name, socket, token]);
+
 
   useEffect(() => {
     if (socket) {
@@ -55,9 +50,17 @@ export const SocketContextProvider = ({ children }) => {
     }
   }
 
+const closeSocketConnection = () => {
+  if(socket) {
+    ["UpdateDialogs", "InviteAccepted", "MessageAdded"].forEach((el) => socket.off(el));
+        socket.disconnect();
+  }
+}
+
   const value = {
     socket,
     emitSocketEvent,
+    closeSocketConnection,
     user: {
       name,
       token,
