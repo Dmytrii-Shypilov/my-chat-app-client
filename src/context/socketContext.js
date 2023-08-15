@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const newSocket = io.connect("http://localhost:4000", {
+    const newSocket = io.connect("https://whatsapp-clone-app-server-production.up.railway.app", {
       auth: {
         userName: name,
         userId: id,
